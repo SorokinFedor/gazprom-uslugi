@@ -1,0 +1,12 @@
+const Router = require('express');
+const router = new Router();
+const controller = require('../controllers/installedEquipmentController');
+router.get('/', controller.getAll);
+router.post('/create-multiple', controller.createMultiple);
+router.get('/agreement/by-subscriber/:subscriber_id', controller.getAgreementBySubscriber);
+router.put('/update-multiple', controller.updateMultiple);
+router.get('/:id', controller.getOne);
+router.put('/:id', controller.update);
+router.delete('/:id', controller.delete);
+router.post('/', controller.create);
+module.exports = router;

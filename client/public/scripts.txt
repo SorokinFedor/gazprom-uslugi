@@ -1,0 +1,7 @@
+PS C:\Users\skywh\Documents\gazprom-uslugi\server> node seeders/seedEquipment.js // для добавления новых записей в таблицы
+
+уничтожение порта 1 - netstat -ano | findstr :3000
+                  2 - taskkill /PID 12345 /F
+esc - закрыть NavBar
+tab - открыть NavBar
+ctrl+q  ctrl+й - переход на главную страницу

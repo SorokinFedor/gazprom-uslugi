@@ -1,0 +1,12 @@
+const Router = require('express');
+const router = new Router();
+const subscriberController = require('../controllers/subscriberController');
+const authMiddleware = require('../middleware/authMiddleware'); 
+const checkRole = require('../middleware/roleMiddleware');
+router.get('/', authMiddleware, checkRole(['ADMIN']), subscriberController.getAll);
+router.get('/:id', authMiddleware, subscriberController.getOne);
+router.put('/:id', authMiddleware, subscriberController.update);
+router.delete('/:id', authMiddleware, checkRole(['ADMIN']), subscriberController.delete);
+router.post('/:id/change-password', authMiddleware, subscriberController.changePassword);
+router.delete('/:id/delete-account', authMiddleware, subscriberController.deleteAccount);
+module.exports = router;
