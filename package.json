@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "postinstall": "npm install"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.5",
